@@ -36,6 +36,14 @@ h1 {
   font-size: large;
 }
 
+#hover-content {
+    display:none;
+}
+
+#parent:hover #hover-content {
+    display:block;
+}
+
 #title {
   font-family: "Anton", sans-serif;
   font-family: "Secular One", sans-serif;
@@ -103,7 +111,7 @@ h1 {
   display: block;
   width: 250px;
   height: 2px;
-  background: #b2b4b5;
+  background: #b2b4b5;	
   position: absolute;
   left: -25%;
   top: 44%;
@@ -122,8 +130,71 @@ h1 {
   z-index: 22;
 }
 
+.col{
+	height: 700px;
+}
+
+
+
 .padlex {
 	background-color: #24272c ;
 	padding: 15px;
   margin-bottom: 0%;
 }
+
+
+.blur__overlay {
+    position: absolute;
+    top: 0;
+	left: 0;
+	right: 0;
+	border-right: 20px
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.blur__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.blur__overlay--primary {
+  background-color: rgba(164, 164, 164, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #000000;
+  
+}
+
+.blur__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+    
+}
+
+.blur__overlay:hover {
+    opacity: 100%;
+    
+  
+}
+
+.blur__overlay:hover > * {
+    transform: translateY(0);
+    
+}
+
+.blur__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.align{
+	margin-left: 15px;
+}
+
+
