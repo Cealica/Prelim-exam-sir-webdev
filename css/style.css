@@ -48,6 +48,10 @@ h1 {
     display:block;
 }
 
+#header {
+  border: 40px solid #24272C;
+}
+
 #title {
   font-family: "Anton", sans-serif;
   font-family: "Secular One", sans-serif;
